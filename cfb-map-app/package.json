@@ -43,6 +43,7 @@
 		"cheerio": "^1.0.0-rc.12",
 		"dotenv": "^16.0.1",
 		"mapbox-gl": "^2.9.2",
-		"rollup": "^2.78.0"
+		"rollup": "^2.78.0",
+		"svelte-dark-mode": "^2.1.0"
 	}
 }

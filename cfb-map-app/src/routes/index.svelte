@@ -6,6 +6,15 @@
 	import { createPopper, type VirtualElement } from '@popperjs/core';
 	import mapboxgl from 'mapbox-gl';
 	import { onMount } from 'svelte';
+	import DarkMode from "svelte-dark-mode";
+	import { afterUpdate } from "svelte";
+
+	
+	let theme: any;
+	afterUpdate(() => {
+	document.body.className = theme; // "dark" or "light"
+  });
+
 
 	let loadingStatus = false;
 
@@ -140,9 +149,7 @@
 	];
 
 	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
-	// mapboxgl.accessToken =
-	// 	'pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
-
+	
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
 async function updateTeamLocation() {
@@ -345,13 +352,13 @@ async function updateTeamLocation() {
 				.setLngLat(coords)
 				.setPopup(
 					new mapboxgl.Popup().setHTML(
-						'<div class=""><img class="h-32 mx-auto rounded-md flex" src=' +
+						'<div class=""><img class="h-24 mx-auto rounded-md flex" src=' +
 							commit.playerImageUrl +
-							'><h1 class="flex justify-center">' +
+							'><h1 class="flex justify-center text-black">' +
 							commit.name +
-							'</h1><h1 class="flex justify-center">' +
+							'</h1><h1 class="flex justify-center text-black">' +
 							commit.location +
-							'</h1><h1 class="flex justify-center">' +
+							'</h1><h1 class="flex justify-center text-black">' +
 							commit.position +
 							'</h1></div>'
 					)
@@ -371,9 +378,9 @@ async function updateTeamLocation() {
 				new mapboxgl.Popup().setHTML(
 					'<img class="h-24" src=' +
 						teamImageUrl +
-						'><h1 class="flex justify-center">' +
+						'><h1 class="flex justify-center text-black">' +
 						selectedTeam +
-						'</h1><h1 class="flex justify-center">' +
+						'</h1><h1 class="flex justify-center text-black">' +
 						selectedTeamLocation +
 						'</h1>'
 				)
@@ -517,6 +524,9 @@ async function updateTeamLocation() {
 		}
 	}
 </script>
+
+
+<DarkMode bind:theme />
 
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet" />
 
@@ -683,7 +693,7 @@ async function updateTeamLocation() {
 	<div class="row-auto flex my-2 md:mx-1 justify-center rounded-md border-black border max-w-fit ">
 		<h1 class=" font-semibold  my-auto mx-1" for="yearInput">Year:</h1>
 		<input
-			class="font-semibold text-center my-2 mr-1 border rounded-md"
+			class=" text-black font-semibold text-center my-2 mr-1 border rounded-md"
 			name="yearInput"
 			type="number"
 			onKeyDown={(e) => {
@@ -726,11 +736,11 @@ async function updateTeamLocation() {
 		>
 			{#if helpDropdownPopoverShow}
 				<div class="flex-col w-36 border-black border-2 rounded-md">
-					<p class="mb-2 mx-2"><span class="font-semibold">Black Marker: </span> Team Location</p>
-					<p class="mb-2 mx-2">
+					<p class="mb-2 mx-2 text-black"><span class="font-semibold text-black">Black Marker: </span> Team Location</p>
+					<p class="mb-2 mx-2 text-black">
 						<span class="font-semibold text-red-500">Red Marker: </span>Commit Location
 					</p>
-					<p class=" flex mb-2 mx-2">
+					<p class=" flex mb-2 mx-2 text-black">
 						To change year, use arrows or type year and press the GO button
 					</p>
 				</div>
@@ -740,8 +750,12 @@ async function updateTeamLocation() {
 </div>
 
 <div class="container mx-auto max-w-7xl md:w-11/12 aspect-video bg-black rounded-md " id="map" />
-<!-- <h1>{loadingStatus}</h1> -->
 <div class="container mx-auto max-w-7xl md:w-11/12 m-1">
+	<button class="border border-black rounded-lg p-1  hover:bg-gray-300" type="menu" on:click={() => (theme ==="light" ? theme = "dark" : theme = "light"
+		)}
+			>
+		  {theme ==="light" ? "Toggle Dark Mode" : "Toggle Light Mode"}
+		</button>
 	<button
 	class="border border-black rounded-lg p-1  hover:bg-gray-300"
 	on:click={() => {
@@ -771,7 +785,7 @@ async function updateTeamLocation() {
 		</h1>
 		{#each teamCommits as commit}
 			<div
-				class="border hover:bg-red-300 hover:scale-105 hover:cursor-pointer rounded-md border-black"
+				class="border hover:bg-red-400 hover:scale-105 hover:cursor-pointer rounded-md border-black"
 				on:click={async () => {
 					var coords = await commit.resultCoords;
 
@@ -784,6 +798,13 @@ async function updateTeamLocation() {
 		{/each}
 	{/if}
 </div>
-<div class="bg-red-300 max-w-7xl min-w-max h-14 sticky top-[100vh]">
-	<h1 class="justify-center flex flex-auto">2022 Kyle Olson</h1>
+<div class="border max-w-7xl min-w-max h-10 sticky top-[100vh]">
+	<h1 class="justify-center flex flex-auto">Made by Kyle Olson</h1>
 </div>
+
+<style>
+	:global(.dark) {
+	  background: #032f62;
+	  color: #f1f8ff;
+	}
+  </style>
