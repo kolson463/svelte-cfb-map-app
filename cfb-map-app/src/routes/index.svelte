@@ -6,15 +6,13 @@
 	import { createPopper, type VirtualElement } from '@popperjs/core';
 	import mapboxgl from 'mapbox-gl';
 	import { onMount } from 'svelte';
-	import DarkMode from "svelte-dark-mode";
-	import { afterUpdate } from "svelte";
+	import DarkMode from 'svelte-dark-mode';
+	import { afterUpdate } from 'svelte';
 
-	
 	let theme: any;
 	afterUpdate(() => {
-	document.body.className = theme; // "dark" or "light"
-  });
-
+		document.body.className = theme; // "dark" or "light"
+	});
 
 	let loadingStatus = false;
 
@@ -149,12 +147,12 @@
 	];
 
 	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
-	
+
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
-async function updateTeamLocation() {
-		 if (selectedConference === 'B1G') {
-			 B1GArray.forEach(async (team) => {
+	async function updateTeamLocation() {
+		if (selectedConference === 'B1G') {
+			B1GArray.forEach(async (team) => {
 				if (team.name === selectedTeam) {
 					console.log(team.location);
 					selectedTeamLocation = team.location;
@@ -435,19 +433,19 @@ async function updateTeamLocation() {
 			await getCommits();
 			commitsToMap();
 		}
-		loadingStatus = false
+		loadingStatus = false;
 	}
 
 	function selectConference(conference: string): void {
-	if(loadingStatus){return}
+		if (loadingStatus) {
+			return;
+		}
 		selectedConference = conference;
 		conferenceToggleDropdown();
-		
 	}
 
 	async function selectTeam(teamName: string): Promise<void> {
-		
-		loadingStatus = true
+		loadingStatus = true;
 		if (year > 2026 || year < 1999) {
 			return;
 		}
@@ -476,10 +474,10 @@ async function updateTeamLocation() {
 		teamCommits = [];
 
 		await updateTeamLocation();
-		console.log(selectedTeamLocation)
+		console.log(selectedTeamLocation);
 		await getCommits();
 		commitsToMap();
-		loadingStatus = false
+		loadingStatus = false;
 	}
 
 	async function getCommits() {
@@ -524,7 +522,6 @@ async function updateTeamLocation() {
 		}
 	}
 </script>
-
 
 <DarkMode bind:theme />
 
@@ -636,8 +633,7 @@ async function updateTeamLocation() {
 							{selectedTeam}
 							{team}
 							on:click={(e) => {
-								loadingStatus ? '': team.name !== selectedTeam ? selectTeam(team.name) : '';
-								
+								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
 							}}
 						/>{/each}
 				{:else if selectedConference === 'SEC'}
@@ -646,7 +642,7 @@ async function updateTeamLocation() {
 							{selectedTeam}
 							{team}
 							on:click={(e) => {
-								loadingStatus ? '': team.name !== selectedTeam ? selectTeam(team.name) : '';
+								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
 							}}
 						/>{/each}
 				{:else if selectedConference === 'Pac-12'}
@@ -655,7 +651,7 @@ async function updateTeamLocation() {
 							{selectedTeam}
 							{team}
 							on:click={(e) => {
-								loadingStatus ? '': team.name !== selectedTeam ? selectTeam(team.name) : '';
+								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
 							}}
 						/>{/each}
 				{:else if selectedConference === 'ACC'}
@@ -664,7 +660,7 @@ async function updateTeamLocation() {
 							{selectedTeam}
 							{team}
 							on:click={(e) => {
-								loadingStatus ? '': team.name !== selectedTeam ? selectTeam(team.name) : '';
+								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
 							}}
 						/>{/each}
 				{:else if selectedConference === 'Big-12'}
@@ -673,7 +669,7 @@ async function updateTeamLocation() {
 							{selectedTeam}
 							{team}
 							on:click={(e) => {
-								loadingStatus ? '': team.name !== selectedTeam ? selectTeam(team.name) : '';
+								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
 							}}
 						/>{/each}
 				{:else}
@@ -682,7 +678,7 @@ async function updateTeamLocation() {
 							{selectedTeam}
 							{team}
 							on:click={(e) => {
-								loadingStatus ? '': team.name !== selectedTeam ? selectTeam(team.name) : '';
+								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
 							}}
 						/>{/each}
 				{/if}
@@ -736,7 +732,9 @@ async function updateTeamLocation() {
 		>
 			{#if helpDropdownPopoverShow}
 				<div class="flex-col w-36 border-black border-2 rounded-md">
-					<p class="mb-2 mx-2 text-black"><span class="font-semibold text-black">Black Marker: </span> Team Location</p>
+					<p class="mb-2 mx-2 text-black">
+						<span class="font-semibold text-black">Black Marker: </span> Team Location
+					</p>
 					<p class="mb-2 mx-2 text-black">
 						<span class="font-semibold text-red-500">Red Marker: </span>Commit Location
 					</p>
@@ -751,23 +749,25 @@ async function updateTeamLocation() {
 
 <div class="container mx-auto max-w-7xl md:w-11/12 aspect-video bg-black rounded-md " id="map" />
 <div class="container mx-auto max-w-7xl md:w-11/12 m-1">
-	<button class="border border-black rounded-lg p-1  hover:bg-gray-300" type="menu" on:click={() => (theme ==="light" ? theme = "dark" : theme = "light"
-		)}
-			>
-		  {theme ==="light" ? "Toggle Dark Mode" : "Toggle Light Mode"}
-		</button>
 	<button
-	class="border border-black rounded-lg p-1  hover:bg-gray-300"
-	on:click={() => {
-		loadingStatus ? '' : showPlayerList = !showPlayerList;
-	}}>{showPlayerList ? 'Hide Player List' : 'Show Player List'}</button
->
-<button
-	class="border border-black rounded-lg p-1  hover:bg-gray-300"
-	on:click={() => {
-		loadingStatus ? '' : teamCenter([team_long, team_lat])
-	}}>Center on Selected Team</button
->
+		class="border border-black rounded-lg p-1  hover:bg-gray-300"
+		type="menu"
+		on:click={() => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))}
+	>
+		{theme === 'light' ? 'Toggle Dark Mode' : 'Toggle Light Mode'}
+	</button>
+	<button
+		class="border border-black rounded-lg p-1  hover:bg-gray-300"
+		on:click={() => {
+			loadingStatus ? '' : (showPlayerList = !showPlayerList);
+		}}>{showPlayerList ? 'Hide Player List' : 'Show Player List'}</button
+	>
+	<button
+		class="border border-black rounded-lg p-1  hover:bg-gray-300"
+		on:click={() => {
+			loadingStatus ? '' : teamCenter([team_long, team_lat]);
+		}}>Center on Selected Team</button
+	>
 </div>
 
 <div class="w-11/12 justify-center mx-auto grid grid-cols-2 lg:grid-cols-3 mb-3">
@@ -798,13 +798,17 @@ async function updateTeamLocation() {
 		{/each}
 	{/if}
 </div>
+
+
+
+
 <div class="border max-w-7xl min-w-max h-10 sticky top-[100vh]">
 	<h1 class="justify-center flex flex-auto">Made by Kyle Olson</h1>
 </div>
 
 <style>
 	:global(.dark) {
-	  background: #032f62;
-	  color: #f1f8ff;
+		background: #032f62;
+		color: #f1f8ff;
 	}
-  </style>
+</style>
