@@ -139,20 +139,20 @@
 		{ name: 'Notre Dame', slug: 'notre-dame', location: 'South Bend, IN' }
 	];
 
-	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
-	// mapboxgl.accessToken =
-	// 	'pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
+	// mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+	mapboxgl.accessToken =
+		'pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
 
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
-	function updateTeamLocation() {
-		if (selectedConference === 'B1G') {
-			B1GArray.forEach(async (team) => {
+async function updateTeamLocation() {
+		 if (selectedConference === 'B1G') {
+			 B1GArray.forEach(async (team) => {
 				if (team.name === selectedTeam) {
-					//console.log(team.location);
+					console.log(team.location);
 					selectedTeamLocation = team.location;
 					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
-					//console.log([team_long, team_lat]);
+					console.log([team_long, team_lat]);
 				}
 			});
 		} else if (selectedConference === 'SEC') {
@@ -369,7 +369,7 @@
 			.setLngLat([team_long, team_lat])
 			.setPopup(
 				new mapboxgl.Popup().setHTML(
-					'<img class="h-28" src=' +
+					'<img class="h-24" src=' +
 						teamImageUrl +
 						'><h1 class="flex justify-center">' +
 						selectedTeam +
@@ -469,6 +469,7 @@
 		teamCommits = [];
 
 		await updateTeamLocation();
+		console.log(selectedTeamLocation)
 		await getCommits();
 		commitsToMap();
 		loadingStatus = false
