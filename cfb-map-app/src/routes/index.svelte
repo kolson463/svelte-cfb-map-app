@@ -154,10 +154,10 @@
 		if (selectedConference === 'B1G') {
 			B1GArray.forEach(async (team) => {
 				if (team.name === selectedTeam) {
-					console.log(team.location);
+					//console.log(team.location);
 					selectedTeamLocation = team.location;
 					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
-					console.log([team_long, team_lat]);
+					//console.log([team_long, team_lat]);
 				}
 			});
 		} else if (selectedConference === 'SEC') {
@@ -287,8 +287,8 @@
 			if (playerMarkers !== null) {
 				var i = playerMarkers.length - 1;
 				while (playerName !== playerMarkers[i].id) {
-					console.log('Player Name ' + playerName);
-					console.log('Player Marker Id ' + playerMarkers[i].id);
+					//console.log('Player Name ' + playerName);
+					//console.log('Player Marker Id ' + playerMarkers[i].id);
 					i--;
 				}
 				if (playerName === playerMarkers[i].id) {
@@ -337,10 +337,10 @@
 					(playerCoord) => playerCoord[0] === coords[0] && playerCoord[1] === coords[1]
 				)
 			) {
-				console.log('Duplicate Location: ' + coords);
+				//console.log('Duplicate Location: ' + coords);
 				coords[0] = coords[0] + count * 0.00075;
 				coords[1] = coords[1] + count * 0.00075;
-				console.log('New Coords: ' + coords);
+				//console.log('New Coords: ' + coords);
 			}
 
 			coordsArray.push(coords);
@@ -450,7 +450,7 @@
 			return;
 		}
 		removeTeamMarkers();
-		console.log(teamMarkers);
+		//console.log(teamMarkers);
 		removeMaps();
 
 		teamToggleDropdown();
@@ -461,7 +461,7 @@
 		if (teamNameUrl.includes('&')) {
 			// Texas A&M Adjustment
 			teamNameUrl = teamNameUrl.replace('&', '');
-			console.log(teamNameUrl);
+			//console.log(teamNameUrl);
 		}
 
 		url =
