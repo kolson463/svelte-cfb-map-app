@@ -139,9 +139,9 @@
 		{ name: 'Notre Dame', slug: 'notre-dame', location: 'South Bend, IN' }
 	];
 
-	// mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
-	mapboxgl.accessToken =
-		'pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
+	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+	// mapboxgl.accessToken =
+	// 	'pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
 
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
