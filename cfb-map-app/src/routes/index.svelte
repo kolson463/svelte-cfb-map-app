@@ -802,7 +802,7 @@
 
 
 
-<div class="border max-w-7xl min-w-max h-10 sticky top-[100vh]">
+<div class="border max-w-11-12 min-w-max h-10 mx-auto sticky flex justify-center">
 	<h1 class="justify-center flex flex-auto">Made by Kyle Olson</h1>
 </div>
 
