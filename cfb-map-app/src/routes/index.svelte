@@ -319,7 +319,7 @@
 			projection: { name: 'globe' },
 			boxZoom: true,
 			scrollZoom: true,
-			zoom: 3.5
+			zoom: 3.75
 		});
 		//@ts-ignore
 		maps.push(map);
@@ -747,14 +747,14 @@
 	</div>
 </div>
 
-<div class="container mx-auto max-w-7xl md:w-11/12 aspect-video bg-black rounded-md " id="map" />
-<div class="container mx-auto max-w-7xl md:w-11/12 m-1">
+<div class="container mx-auto md:w-11/12 aspect-video bg-black rounded-md " id="map" />
+<div class="container mx-auto md:w-11/12 m-1">
 	<button
 		class="border border-black rounded-lg p-1  hover:bg-gray-300"
 		type="menu"
 		on:click={() => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))}
 	>
-		{theme === 'light' ? 'Toggle Dark Mode' : 'Toggle Light Mode'}
+		{theme === 'light' ? 'Dark Mode' : 'Light Mode'}
 	</button>
 	<button
 		class="border border-black rounded-lg p-1  hover:bg-gray-300"
@@ -793,7 +793,7 @@
 				}}
 			>
 				<h1 class="p-1 font-semibold">{commit.name}</h1>
-				<h1 class="p-1">{commit.location}</h1>
+				<h1 class="px-1 pb-1">{commit.location}</h1>
 			</div>
 		{/each}
 	{/if}
