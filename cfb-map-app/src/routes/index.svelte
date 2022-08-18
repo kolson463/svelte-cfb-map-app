@@ -747,8 +747,11 @@
 	</div>
 </div>
 
-<div class="container mx-auto md:w-11/12 aspect-video bg-black rounded-md " id="map" />
-<div class="container mx-auto md:w-11/12 m-1">
+<div
+	class="container mx-auto md:w-11/12 max-w-7xl aspect-video bg-black rounded-md "
+	id="map"
+/>
+<div class="container mx-auto md:w-11/12 max-w-7xl m-1">
 	<button
 		class="border border-black rounded-lg p-1  hover:bg-gray-300"
 		type="menu"
@@ -792,15 +795,12 @@
 					commitCenter(coords, commit.name);
 				}}
 			>
-				<h1 class="p-1 font-semibold">{commit.name}</h1>
-				<h1 class="px-1 pb-1">{commit.location}</h1>
+				<h1 class="px-1 pt-1 md:p-1 font-semibold">{commit.name}</h1>
+				<h1 class="px-1 md:p-1">{commit.location}</h1>
 			</div>
 		{/each}
 	{/if}
 </div>
-
-
-
 
 <div class="border max-w-11-12 min-w-max h-10 mx-auto sticky flex justify-center">
 	<h1 class="justify-center flex flex-auto">Made by Kyle Olson</h1>
