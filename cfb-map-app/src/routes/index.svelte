@@ -748,14 +748,14 @@
 </div>
 
 <div
-	class="lg:grid lg:grid-cols-5 lg:grid-rows-1 lg:max-w-screen-2xl lg:mx-auto lg:border lg:w-full lg:h-full lg:max-h-[45rem] lg:mb-2 lg:or"
+	class="lg:grid lg:grid-cols-5 lg:grid-rows-1 lg:max-w-screen-2xl lg:mx-auto lg:border lg:w-full  lg:h-fit lg:mb-2 "
 >
 	<div class="lg:grid lg:col-span-4 lg:order-last ">
 		<div
-			class="container  mx-auto md:w-11/12 lg:w-full   aspect-video bg-black rounded-md "
+			class="container  mx-auto   lg:max-w-7xl lg:min-w-2xl  aspect-video bg-black rounded-md "
 			id="map"
 		/>
-		<div class=" mx-auto md:w-11/12 lg:w-full max-w-7xl m-1 justify-center flex">
+		<div class=" mx-auto md:w-11/12 lg:w-full max-w-7xl m-1 justify-center flex ">
 			<button
 				class="border border-black rounded-lg p-1  hover:bg-gray-300"
 				type="menu"
@@ -778,7 +778,7 @@
 		</div>
 	</div>
 
-	<div class="w-11/12 justify-center mx-auto grid grid-cols-2 lg:grid-cols-1  lg:h-full">
+	<div class="w-11/12 justify-center mx-auto grid grid-cols-2 lg:grid-cols-1  lg:max-h-[35rem]">
 		{#if loadingPlayers && showPlayerList}
 			<div>Loading Players</div>
 		{/if}
