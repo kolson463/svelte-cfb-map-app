@@ -748,7 +748,7 @@
 </div>
 
 <div
-	class="lg:grid lg:grid-cols-5 lg:grid-rows-1 lg:max-w-screen-2xl lg:mx-auto lg:border lg:w-full lg:h-full lg:max-h-[48rem] lg:mb-2 lg:or"
+	class="lg:grid lg:grid-cols-5 lg:grid-rows-1 lg:max-w-screen-2xl lg:mx-auto lg:border lg:w-full lg:h-full lg:max-h-[45rem] lg:mb-2 lg:or"
 >
 	<div class="lg:grid lg:col-span-4 lg:order-last ">
 		<div
