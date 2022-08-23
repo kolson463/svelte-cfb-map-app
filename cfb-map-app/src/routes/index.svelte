@@ -747,72 +747,10 @@
 	</div>
 </div>
 
-<!-- <div class="max-w-fit container aspect-video bg-gray-400">
-	<div class="md:grid md:grid-cols-10  ">
-		<div class="flex flex-col col-span-2 md:h-full">
-			{#if loadingPlayers && showPlayerList}
-				<div>Loading Players</div>
-			{/if}
-			{#if teamCommits.length == 0 && playersLoaded && showPlayerList}
-				<h1 class="justify-center mx-auto font-semibold lg:text text-xl col-span-2 lg:col-span-3">
-					{playersLoaded && numCommits == 0 ? 'Zero Commits' : ''}
-				</h1>
-			{/if}
-			{#if teamCommits.length > 0 && playersLoaded && showPlayerList}
-				<h1
-					class="justify-center mx-auto font-semibold md:text-lg  text-xl col-span-2 lg:col-span-3"
-				>
-					{numCommits != 0 ? 'Commits (' + numCommits + ')' : ''}
-				</h1>
-				<ul class="h- overflow-scroll over">
-					{#each teamCommits as commit}
-						<div
-							class="border  hover:bg-red-400 hover:scale-105 hover:cursor-pointer md:hover:scale-100 rounded-md border-black"
-							on:click={async () => {
-								var coords = await commit.resultCoords;
-
-								commitCenter(coords, commit.name);
-							}}
-						>
-							<h1 class=" md:text-sm px-1 pt-1 md:pt-0  font-semibold">{commit.name}</h1>
-							<h1 class="md:text-sm px-1 md:p-1">{commit.location}</h1>
-						</div>
-					{/each}
-				</ul>
-			{/if}
-		</div>
-
-		<div class="grid col-span-8 max-h-fit">
-			<div class="container mx-auto  max-w-7xl aspect-video bg-black rounded-md " id="map" />
-			<div class="container mx-auto  max-w-7xl mt-1">
-				<button
-					class="border border-black rounded-lg p-1  hover:bg-gray-300"
-					type="menu"
-					on:click={() => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))}
-				>
-					{theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-				</button>
-				<button
-					class="border border-black rounded-lg p-1  hover:bg-gray-300"
-					on:click={() => {
-						loadingStatus ? '' : (showPlayerList = !showPlayerList);
-					}}>{showPlayerList ? 'Hide Player List' : 'Show Player List'}</button
-				>
-				<button
-					class="border border-black rounded-lg p-1  hover:bg-gray-300"
-					on:click={() => {
-						loadingStatus ? '' : teamCenter([team_long, team_lat]);
-					}}>Center on Selected Team</button
-				>
-			</div>
-		</div>
-	</div>
-</div> -->
-
 <div
-	class="lg:grid lg:grid-cols-5 lg:grid-rows-1 lg:max-w-screen-2xl lg:mx-auto lg:border lg:w-full lg:h-full lg:max-h-[48rem] lg:mb-2"
+	class="lg:grid lg:grid-cols-5 lg:grid-rows-1 lg:max-w-screen-2xl lg:mx-auto lg:border lg:w-full lg:h-full lg:max-h-[48rem] lg:mb-2 lg:or"
 >
-	<div class="lg:grid lg:col-span-4  ">
+	<div class="lg:grid lg:col-span-4 lg:order-last ">
 		<div
 			class="container  mx-auto md:w-11/12 lg:w-full   aspect-video bg-black rounded-md "
 			id="map"
