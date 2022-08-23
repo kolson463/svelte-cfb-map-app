@@ -146,8 +146,7 @@
 		{ name: 'Notre Dame', slug: 'notre-dame', location: 'South Bend, IN' }
 	];
 
-	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
-
+	 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN; 
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
 	async function updateTeamLocation() {
@@ -752,7 +751,7 @@
 >
 	<div class="lg:grid lg:col-span-4 lg:order-last ">
 		<div
-			class="container  mx-auto   lg:max-w-7xl lg:min-w-2xl  aspect-video bg-black rounded-md "
+			class="container  mx-auto lg:max-h-[33rem]  lg:max-w-7xl lg:min-w-2xl  aspect-video bg-black rounded-md "
 			id="map"
 		/>
 		<div class=" mx-auto md:w-11/12 lg:w-full max-w-7xl m-1 justify-center flex ">
