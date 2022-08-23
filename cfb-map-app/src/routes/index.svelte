@@ -795,7 +795,7 @@
 			<div class=" lg:overflow-y-auto lg:grid-cols-1 lg:col-span-1  grid grid-cols-2 col-span-2">
 				{#each teamCommits as commit}
 					<div
-						class="border hover:bg-red-400 hover:scale-105 hover:cursor-pointer rounded-md border-black grid lg:col-span-1"
+						class="border hover:bg-red-400 hover:scale-105 hover:cursor-pointer lg:hover:scale-100 rounded-md border-black grid lg:col-span-1"
 						on:click={async () => {
 							var coords = await commit.resultCoords;
 
