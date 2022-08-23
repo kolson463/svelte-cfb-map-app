@@ -407,7 +407,7 @@
 		'https://s3media.247sports.com/Uploads/Assets/814/84/11084814.png?fit=bounds&crop=50:50,offset-y0.50&width=50&height=50&fit=crop';
 
 	let teamNameUrl = 'nebraska';
-	let year = 2022;
+	let year = 2023;
 
 	let url =
 		'https://247sports.com/college/' +
