@@ -140,13 +140,91 @@
 		{ name: 'Stanford', slug: 'stanford', location: 'Stanford, CA' }
 	];
 
+	let AACArray: teamInfo[] = [
+		{ name: 'Cincinnati', slug: 'cincinnati', location: 'Cincinnati, OH' },
+		{ name: 'East Carolina', slug: 'east-carolina', location: 'Greenville, NC' },
+		{ name: 'Houston', slug: 'houston', location: 'Houston, TX' },
+		{ name: 'Memphis', slug: 'memphis', location: 'memphis, TN' },
+		{ name: 'Navy', slug: 'navy', location: 'Annapolis, MD' },
+		{ name: 'SMU', slug: 'smu', location: 'Dallas, TX' },
+		{ name: 'South Florida', slug: 'south-florida', location: 'Tampa, FL' },
+		{ name: 'Temple', slug: 'temple', location: 'Philadelphia, PA' },
+		{ name: 'Tulane', slug: 'tulane', location: 'New Orleans, LA' },
+		{ name: 'Tulsa', slug: 'tulsa', location: 'Tulsa, OK' },
+		{ name: 'UCF', slug: 'central-florida', location: 'Orlando, FL' }
+	];
+
 	let INDArray: teamInfo[] = [
 		{ name: 'Army', slug: 'army', location: 'West Point, NY' },
 		{ name: 'BYU', slug: 'byu', location: 'Provo, UT' },
 		{ name: 'Notre Dame', slug: 'notre-dame', location: 'South Bend, IN' }
 	];
 
-	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN; 
+	let CUSAArray: teamInfo[] = [
+		{ name: 'Charlotte', slug: 'charlotte', location: 'Charlotte, NC' },
+		{ name: 'Florida International', slug: 'florida-international', location: 'Miami, FL' },
+		{ name: 'Florida Atlantic', slug: 'florida-atlantic', location: 'Boca Raton, FL' },
+		{ name: 'Louisiana Tech', slug: 'louisiana-tech', location: 'Ruston, LA' },
+		{ name: 'Middle Tennessee State', slug: 'middle-tennessee-state', location: 'Murfreesboro, TN' },
+		{ name: 'North Texas', slug: 'north-texas', location: 'Denton, TX' },
+		{ name: 'Rice', slug: 'rice', location: 'Houston, TX' },
+		{ name: 'Alabama Birmingham', slug: 'alabama-birmingham', location: 'Birmingham, AL' },
+		{ name: 'UTEP', slug: 'utep', location: 'El Paso, TX' },
+		{ name: 'Western Kentucky', slug: 'western-kentucky', location: 'Bowling Green, KY' },
+		{ name: 'UTSA', slug: 'utsa', location: 'San Antonio, TX' }
+	];
+
+	let MACArray: teamInfo[] = [
+		{ name: 'Akron', slug: 'akron', location: 'Akron, OH' },
+		{ name: 'Ball State', slug: 'ball-state', location: 'Muncie, IN' },
+		{ name: 'Bowling Green', slug: 'bowling-green', location: 'Bowling Green, OH' },
+		{ name: 'Buffalo', slug: 'buffalo', location: 'Buffalo, NY' },
+		{ name: 'Central Michigan', slug: 'Central Michigan', location: 'Mount Pleasant, MI' },
+		{ name: 'Eastern Michigan', slug: 'eastern-michigan', location: 'Ypsilanti, MI' },
+		{ name: 'Kent State', slug: 'kent-state', location: 'Kent, OH' },
+		{ name: 'Miami Ohio', slug: 'miami-ohio', location: 'Oxford, Ohio' },
+		{ name: 'Northern Illinois', slug: 'northern-illinois', location: 'Dekalb, IL' },
+		{ name: 'Ohio', slug: 'ohio', location: 'Athens, OH' },
+		{ name: 'Toledo', slug: 'toldeo', location: 'Toledo, OH' },
+		{ name: 'Western Michigan', slug: 'western-michigan', location: 'Kalamazoo, MI' }
+	];
+
+	let MWESTArray: teamInfo[] = [
+		{ name: 'Air Force', slug: 'air-force', location: 'Colorado Springs, CO' },
+		{ name: 'Boise State', slug: 'boise-state', location: 'Boise, ID' },
+		{ name: 'Colorado State', slug: 'colorado-state', location: 'Fort Collins, CO' },
+		{ name: 'Fresno State', slug: 'fresno-state', location: 'Fresno, CA' },
+		{ name: 'Hawaii', slug: 'hawaii', location: 'Honolulu, HI' },
+		{ name: 'Nevada', slug: 'nevada', location: 'Reno, NV' },
+		{ name: 'New Mexico', slug: 'New Mexico', location: 'Albuquerque, NM' },
+		{ name: 'San Diego State', slug: 'san-diego-state', location: 'San Diego, CA' },
+		{ name: 'San Jose State', slug: 'san-jose-state', location: 'San Jose, CA' },
+		{ name: 'UNLV', slug: 'unlv', location: 'Las Vegas, NV' },
+		{ name: 'Utah State', slug: 'utah-state', location: 'Logan, UT' },
+		{ name: 'Wyoming', slug: 'wyoming', location: 'Laramie, WY' }
+	];
+
+	let SBCArray: teamInfo[] = [
+		{ name: 'Appalachian State', slug: 'appalachian-state', location: 'Boone, NC' },
+		{ name: 'Arkansas State', slug: 'arkansas-state', location: 'Jonesboro, AR' },
+		{ name: 'Coastal Carolina', slug: 'coastal-carolina', location: 'Conway, SC' },
+		{ name: 'Georgia Southern', slug: 'georgia-southern', location: 'Statesboro, GA' },
+		{ name: 'Georgia State', slug: 'georgia-state', location: 'Atlanta, GA' },
+		{ name: 'James Madison', slug: 'james-madison', location: 'Harrisonburg, VA' },
+		{ name: 'Louisiana-Monroe', slug: 'louisian-monroe', location: 'Monroe, LA' },
+		{ name: 'Louisiana', slug: 'louisiana', location: 'Lafayette, LA' },
+		{ name: 'Marshall', slug: 'marshall', location: 'Hungtington, WV' },
+		{ name: 'Old Dominion', slug: 'old-dominion', location: 'Norfolk, VA' },
+		{ name: 'South Alabama', slug: 'south-alabama', location: 'Mobile, AL' },
+		{ name: 'Southern Miss', slug: 'southern-miss', location: 'Hattiesburg, MS' },
+		{ name: 'Texas State', slug: 'texas-state', location: 'San Marcos, TX' },
+		{ name: 'Troy', slug: 'troy', location: 'Troy, AL' }
+	];
+
+	//mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+
+	mapboxgl.accessToken =
+		'pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
 	async function updateTeamLocation() {
@@ -173,6 +251,20 @@
 					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
 				}
 			});
+		} else if (selectedConference === 'CUSA') {
+			CUSAArray.forEach(async (team) => {
+				if (team.name == selectedTeam) {
+					selectedTeamLocation = team.location;
+					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
+				}
+			});
+		} else if (selectedConference === 'AAC') {
+			AACArray.forEach(async (team) => {
+				if (team.name == selectedTeam) {
+					selectedTeamLocation = team.location;
+					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
+				}
+			});
 		} else if (selectedConference === 'Big-12') {
 			Big12Array.forEach(async (team) => {
 				if (team.name == selectedTeam) {
@@ -182,6 +274,27 @@
 			});
 		} else if (selectedConference === 'Pac-12') {
 			Pac12Array.forEach(async (team) => {
+				if (team.name == selectedTeam) {
+					selectedTeamLocation = team.location;
+					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
+				}
+			});
+		} else if (selectedConference === 'SBC') {
+			SBCArray.forEach(async (team) => {
+				if (team.name == selectedTeam) {
+					selectedTeamLocation = team.location;
+					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
+				}
+			});
+		} else if (selectedConference === 'MAC') {
+			MACArray.forEach(async (team) => {
+				if (team.name == selectedTeam) {
+					selectedTeamLocation = team.location;
+					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
+				}
+			});
+		} else if (selectedConference === 'MWEST') {
+			MWESTArray.forEach(async (team) => {
 				if (team.name == selectedTeam) {
 					selectedTeamLocation = team.location;
 					[team_long, team_lat] = await geoCodeLocations(selectedTeamLocation);
@@ -216,6 +329,8 @@
 		const geoCodeUrl =
 			'https://api.mapbox.com/geocoding/v5/mapbox.places/' +
 			parsedLocation +
+			//'.json?limit=1&autocomplete=false&access_token=pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNzZ0NDVqYTBpcnEzbnFodHE5bjVyN2IifQ.u9hrRp9nzRbiGT3mJ-X5LA';
+
 			'.json?limit=1&autocomplete=false&access_token=pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
 
 		try {
@@ -356,6 +471,12 @@
 							'</h1><h1 class="flex justify-center text-black">' +
 							commit.location +
 							'</h1><h1 class="flex justify-center text-black">' +
+							commit.stars +
+							' ' +
+							'(' +
+							commit.score +
+							')' +
+							' ' +
 							commit.position +
 							'</h1></div>'
 					)
@@ -398,6 +519,8 @@
 		name: string;
 		playerImageUrl: string;
 		position: string;
+		score: string;
+		stars: string;
 		location: string;
 		resultCoords: Promise<[number, number]>;
 	}[] = [];
@@ -500,6 +623,18 @@
 				let name = $('.ri-page__name-link', player1).text();
 				let location = $('.meta', player1).text();
 				let position = $('.position', player1).text();
+				let score = $('.score', player1).text();
+				let stars = '';
+
+				parseFloat(score) > 0.98832
+					? (stars = '5 ⭐')
+					: parseFloat(score) > 0.89
+					? (stars = '4 ⭐')
+					: parseFloat(score) > 0.7999
+					? (stars = '3 ⭐')
+					: score === 'NA'
+					? (stars = 'Not Rated')
+					: (stars = '2 ⭐');
 
 				location = location.trim();
 
@@ -507,7 +642,7 @@
 
 				const resultCoords: Promise<[number, number]> = geoCodeLocations(location);
 
-				let playerData = { name, playerImageUrl, position, location, resultCoords };
+				let playerData = { name, playerImageUrl, position, score, stars, location, resultCoords };
 
 				teamCommits.push(playerData);
 			});
@@ -527,7 +662,7 @@
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet" />
 
 <h1 class="flex mx-auto justify-center text-2xl lg:text-3xl font-bold">
-	NCAA College Football Commit Map (Power Five And Top IND)
+	NCAA College Football Commit Map
 </h1>
 
 <div class=" flex flex-row justify-center ">
@@ -563,6 +698,20 @@
 				}}
 			/>
 			<ConferenceButton
+				conference="AAC"
+				{selectedConference}
+				on:click={(e) => {
+					selectConference('AAC');
+				}}
+			/>
+			<ConferenceButton
+				conference="CUSA"
+				{selectedConference}
+				on:click={(e) => {
+					selectConference('CUSA');
+				}}
+			/>
+			<ConferenceButton
 				conference="B1G"
 				{selectedConference}
 				on:click={(e) => {
@@ -589,6 +738,27 @@
 				{selectedConference}
 				on:click={(e) => {
 					selectConference('SEC');
+				}}
+			/>
+			<ConferenceButton
+				conference="MAC"
+				{selectedConference}
+				on:click={(e) => {
+					selectConference('MAC');
+				}}
+			/>
+			<ConferenceButton
+				conference="MWEST"
+				{selectedConference}
+				on:click={(e) => {
+					selectConference('MWEST');
+				}}
+			/>
+			<ConferenceButton
+				conference="SBC"
+				{selectedConference}
+				on:click={(e) => {
+					selectConference('SBC');
 				}}
 			/>
 			<ConferenceButton
@@ -653,6 +823,24 @@
 								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
 							}}
 						/>{/each}
+				{:else if selectedConference === 'AAC'}
+					{#each AACArray as team}
+						<TeamListButton
+							{selectedTeam}
+							{team}
+							on:click={(e) => {
+								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
+							}}
+						/>{/each}
+				{:else if selectedConference === 'CUSA'}
+					{#each CUSAArray as team}
+						<TeamListButton
+							{selectedTeam}
+							{team}
+							on:click={(e) => {
+								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
+							}}
+						/>{/each}
 				{:else if selectedConference === 'ACC'}
 					{#each ACCArray as team}
 						<TeamListButton
@@ -671,6 +859,34 @@
 								loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
 							}}
 						/>{/each}
+
+						{:else if selectedConference === 'MAC'}
+						{#each MACArray as team}
+							<TeamListButton
+								{selectedTeam}
+								{team}
+								on:click={(e) => {
+									loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
+								}}
+							/>{/each}
+					{:else if selectedConference === 'MWEST'}
+						{#each MWESTArray as team}
+							<TeamListButton
+								{selectedTeam}
+								{team}
+								on:click={(e) => {
+									loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
+								}}
+							/>{/each}
+					{:else if selectedConference === 'SBC'}
+						{#each SBCArray as team}
+							<TeamListButton
+								{selectedTeam}
+								{team}
+								on:click={(e) => {
+									loadingStatus ? '' : team.name !== selectedTeam ? selectTeam(team.name) : '';
+								}}
+							/>{/each}		
 				{:else}
 					{#each INDArray as team}
 						<TeamListButton
@@ -802,6 +1018,7 @@
 						}}
 					>
 						<h1 class="px-1 pt-1 md:p-1 font-semibold">{commit.name}</h1>
+						<h1 class="px-1 pt-1 md:p-1 ">{commit.stars} {commit.position}</h1>
 						<h1 class="px-1 md:p-1">{commit.location}</h1>
 					</div>
 				{/each}
@@ -811,7 +1028,13 @@
 </div>
 <div class="border max-w-11-12 min-w-max h-10 mx-auto sticky flex justify-center">
 	<h1 class="justify-center flex flex-auto p-1">
-		Made by <a class="ml-1 px-1  border underline rounded-lg" href="https://kyleolson.vercel.app/" target="_blank"> Kyle Olson</a>
+		Made by <a
+			class="ml-1 px-1  border underline rounded-lg"
+			href="https://kyleolson.vercel.app/"
+			target="_blank"
+		>
+			Kyle Olson</a
+		>
 	</h1>
 </div>
 
