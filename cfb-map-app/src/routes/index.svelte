@@ -221,10 +221,8 @@
 		{ name: 'Troy', slug: 'troy', location: 'Troy, AL' }
 	];
 
-	//mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
-	mapboxgl.accessToken =
-		'pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
 	async function updateTeamLocation() {
@@ -329,9 +327,8 @@
 		const geoCodeUrl =
 			'https://api.mapbox.com/geocoding/v5/mapbox.places/' +
 			parsedLocation +
-			//'.json?limit=1&autocomplete=false&access_token=pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNzZ0NDVqYTBpcnEzbnFodHE5bjVyN2IifQ.u9hrRp9nzRbiGT3mJ-X5LA';
+			'.json?limit=1&autocomplete=false&access_token=pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNzZ0NDVqYTBpcnEzbnFodHE5bjVyN2IifQ.u9hrRp9nzRbiGT3mJ-X5LA';
 
-			'.json?limit=1&autocomplete=false&access_token=pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNWgzaWZ3NjA1bnAzam1kZmM0bDA2MncifQ.wDeobe_7uhejjEDCrNEkww';
 
 		try {
 			const teamCoordsRaw = await axios.get(geoCodeUrl);
