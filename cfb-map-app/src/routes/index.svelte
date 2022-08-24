@@ -146,7 +146,7 @@
 		{ name: 'Notre Dame', slug: 'notre-dame', location: 'South Bend, IN' }
 	];
 
-	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN; 
+	// mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN; 
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
 	async function updateTeamLocation() {
@@ -810,7 +810,9 @@
 	</div>
 </div>
 <div class="border max-w-11-12 min-w-max h-10 mx-auto sticky flex justify-center">
-	<h1 class="justify-center flex flex-auto">Made by Kyle Olson</h1>
+	<h1 class="justify-center flex flex-auto p-1">
+		Made by <a class="ml-1 px-1  border underline rounded-lg" href="https://kyleolson.vercel.app/" target="_blank"> Kyle Olson</a>
+	</h1>
 </div>
 
 <style>
