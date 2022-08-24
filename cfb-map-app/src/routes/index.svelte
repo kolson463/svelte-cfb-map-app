@@ -223,6 +223,7 @@
 
 	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
+	
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
 	async function updateTeamLocation() {
@@ -329,6 +330,7 @@
 			parsedLocation +
 			'.json?limit=1&autocomplete=false&access_token=pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNzZ0NDVqYTBpcnEzbnFodHE5bjVyN2IifQ.u9hrRp9nzRbiGT3mJ-X5LA';
 
+			
 
 		try {
 			const teamCoordsRaw = await axios.get(geoCodeUrl);
@@ -624,14 +626,14 @@
 				let stars = '';
 
 				parseFloat(score) > 0.98832
-					? (stars = '5 ⭐')
+					? (stars = '⭐⭐⭐⭐⭐')
 					: parseFloat(score) > 0.89
-					? (stars = '4 ⭐')
+					? (stars = '⭐⭐⭐⭐')
 					: parseFloat(score) > 0.7999
-					? (stars = '3 ⭐')
+					? (stars = '⭐⭐⭐')
 					: score === 'NA'
 					? (stars = 'Not Rated')
-					: (stars = '2 ⭐');
+					: (stars = '⭐⭐');
 
 				location = location.trim();
 
