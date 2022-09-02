@@ -132,48 +132,63 @@
 	];
 
 	let SECArray: teamInfo[] = [
-		{ name: 'Alabama', slug: 'alabama', location: 'Tuscaloosa, AL', color:"#9E1B32" },
-		{ name: 'Texas A&M', slug: 'texas-am', location: 'College Station, TX', color:"#500000" },
-		{ name: 'Arkansas', slug: 'arkansas', location: 'Fayetteville, AR', color:"#9D2235" },
-		{ name: 'Missouri', slug: 'missouri', location: 'Columbia, MO', color:"#F1B82D" },
-		{ name: 'Kentucky', slug: 'kentucky', location: 'Lexington, KY', color:"#0033A0" },
-		{ name: 'Vanderbilt', slug: 'vanderbilt', location: 'Nashville, TN', color:"#866D4B" },
-		{ name: 'Tennessee', slug: 'tennessee', location: 'Knoxville, TN', color:"#FF8200" },
-		{ name: 'Georgia', slug: 'georgia', location: 'Athens, GA', color:"#BA0C2F" },
-		{ name: 'Florida', slug: 'florida', location: 'Gainesville, FL', color:"#0021A5" },
-		{ name: 'Mississippi State', slug: 'mississippi-state', location: 'Starkville, MS', color:"#660000" },
-		{ name: 'Ole Miss', slug: 'ole-miss', location: 'Oxford, MS', color:"#006BA6" },
-		{ name: 'South Carolina', slug: 'south-carolina', location: 'Columbia, SC', color:"#73000A" },
-		{ name: 'Auburn', slug: 'auburn', location: 'Auburn, AL', color:"#0C2340" },
-		{ name: 'LSU', slug: 'lsu', location: 'Baton Rouge, LA', color:"#461D7C" },
+		{ name: 'Alabama', slug: 'alabama', location: 'Tuscaloosa, AL', color: '#9E1B32' },
+		{ name: 'Texas A&M', slug: 'texas-am', location: 'College Station, TX', color: '#500000' },
+		{ name: 'Arkansas', slug: 'arkansas', location: 'Fayetteville, AR', color: '#9D2235' },
+		{ name: 'Missouri', slug: 'missouri', location: 'Columbia, MO', color: '#F1B82D' },
+		{ name: 'Kentucky', slug: 'kentucky', location: 'Lexington, KY', color: '#0033A0' },
+		{ name: 'Vanderbilt', slug: 'vanderbilt', location: 'Nashville, TN', color: '#866D4B' },
+		{ name: 'Tennessee', slug: 'tennessee', location: 'Knoxville, TN', color: '#FF8200' },
+		{ name: 'Georgia', slug: 'georgia', location: 'Athens, GA', color: '#BA0C2F' },
+		{ name: 'Florida', slug: 'florida', location: 'Gainesville, FL', color: '#0021A5' },
+		{
+			name: 'Mississippi State',
+			slug: 'mississippi-state',
+			location: 'Starkville, MS',
+			color: '#660000'
+		},
+		{ name: 'Ole Miss', slug: 'ole-miss', location: 'Oxford, MS', color: '#006BA6' },
+		{ name: 'South Carolina', slug: 'south-carolina', location: 'Columbia, SC', color: '#73000A' },
+		{ name: 'Auburn', slug: 'auburn', location: 'Auburn, AL', color: '#0C2340' },
+		{ name: 'LSU', slug: 'lsu', location: 'Baton Rouge, LA', color: '#461D7C' }
 	];
 
 	let Big12Array: teamInfo[] = [
-		{ name: 'Baylor', slug: 'baylor', location: 'Waco, TX', color:"#154734" },
-		{ name: 'Iowa State', slug: 'iowa-state', location: 'Ames, IA', color:"#C8102E" },
-		{ name: 'Kansas', slug: 'kansas', location: 'Lawrence, KS', color:"#0051BA" },
-		{ name: 'Kansas State', slug: 'kansas-state', location: 'Manhattan, KS', color:"#512888" },
-		{ name: 'Oklahoma', slug: 'oklahoma', location: 'Norman, OK', color:"#841617" },
-		{ name: 'Oklahoma State', slug: 'oklahoma-state', location: 'Stillwater, OK', color:"#FF7300" },
-		{ name: 'TCU', slug: 'tcu', location: 'Forth Worth, TX', color:"#4D1979" },
-		{ name: 'Texas', slug: 'texas', location: 'Austin, TX', color:"#BF5700" },
-		{ name: 'Texas Tech', slug: 'texas-tech', location: 'Lubbock, TX', color:"#CC0000" },
-		{ name: 'West Virginia', slug: 'west-virginia', location: 'Morgantown, WV', color:"#002855" }
+		{ name: 'Baylor', slug: 'baylor', location: 'Waco, TX', color: '#154734' },
+		{ name: 'Iowa State', slug: 'iowa-state', location: 'Ames, IA', color: '#C8102E' },
+		{ name: 'Kansas', slug: 'kansas', location: 'Lawrence, KS', color: '#0051BA' },
+		{ name: 'Kansas State', slug: 'kansas-state', location: 'Manhattan, KS', color: '#512888' },
+		{ name: 'Oklahoma', slug: 'oklahoma', location: 'Norman, OK', color: '#841617' },
+		{
+			name: 'Oklahoma State',
+			slug: 'oklahoma-state',
+			location: 'Stillwater, OK',
+			color: '#FF7300'
+		},
+		{ name: 'TCU', slug: 'tcu', location: 'Forth Worth, TX', color: '#4D1979' },
+		{ name: 'Texas', slug: 'texas', location: 'Austin, TX', color: '#BF5700' },
+		{ name: 'Texas Tech', slug: 'texas-tech', location: 'Lubbock, TX', color: '#CC0000' },
+		{ name: 'West Virginia', slug: 'west-virginia', location: 'Morgantown, WV', color: '#002855' }
 	];
 
 	let Pac12Array: teamInfo[] = [
-		{ name: 'Colorado', slug: 'colorado', location: 'Boulder, CO', color:"#CFB87C"  },
-		{ name: 'Utah', slug: 'utah', location: 'Salt Lake City, UT', color:"#CC0000"  },
-		{ name: 'Washington State', slug: 'washington-state', location: 'Pullman, WA', color:"#981E32"  },
-		{ name: 'Washington', slug: 'washington', location: 'Seattle, WA', color:"#4B2E83"  },
-		{ name: 'Oregon', slug: 'oregon', location: 'Eugene, OR', color:"#154733"  },
-		{ name: 'Oregon State', slug: 'oregon-state', location: 'Corvallis, OR', color:"#DC4405"  },
-		{ name: 'California', slug: 'california', location: 'Berkeley, CA', color:"#003262" },
-		{ name: 'UCLA', slug: 'ucla', location: 'Beverly Hills, CA', color:"#2D68C4"  },
-		{ name: 'USC', slug: 'usc', location: 'Los Angeles, CA', color:"#990000"  },
-		{ name: 'Arizona State', slug: 'arizona-state', location: 'Tempe, AZ', color:"#8C1D40"  },
-		{ name: 'Arizona', slug: 'arizona', location: 'Tucson, AZ', color:"#003366" },
-		{ name: 'Stanford', slug: 'stanford', location: 'Stanford, CA', color:"#8C1515"  }
+		{ name: 'Colorado', slug: 'colorado', location: 'Boulder, CO', color: '#CFB87C' },
+		{ name: 'Utah', slug: 'utah', location: 'Salt Lake City, UT', color: '#CC0000' },
+		{
+			name: 'Washington State',
+			slug: 'washington-state',
+			location: 'Pullman, WA',
+			color: '#981E32'
+		},
+		{ name: 'Washington', slug: 'washington', location: 'Seattle, WA', color: '#4B2E83' },
+		{ name: 'Oregon', slug: 'oregon', location: 'Eugene, OR', color: '#154733' },
+		{ name: 'Oregon State', slug: 'oregon-state', location: 'Corvallis, OR', color: '#DC4405' },
+		{ name: 'California', slug: 'california', location: 'Berkeley, CA', color: '#003262' },
+		{ name: 'UCLA', slug: 'ucla', location: 'Beverly Hills, CA', color: '#2D68C4' },
+		{ name: 'USC', slug: 'usc', location: 'Los Angeles, CA', color: '#990000' },
+		{ name: 'Arizona State', slug: 'arizona-state', location: 'Tempe, AZ', color: '#8C1D40' },
+		{ name: 'Arizona', slug: 'arizona', location: 'Tucson, AZ', color: '#003366' },
+		{ name: 'Stanford', slug: 'stanford', location: 'Stanford, CA', color: '#8C1515' }
 	];
 
 	let AACArray: teamInfo[] = [
@@ -197,68 +212,144 @@
 	];
 
 	let CUSAArray: teamInfo[] = [
-		{ name: 'Charlotte', slug: 'charlotte', location: 'Charlotte, NC', color:"#046A38" },
-		{ name: 'Florida International', slug: 'florida-international', location: 'Miami, FL', color:"#081E3F" },
-		{ name: 'Florida Atlantic', slug: 'florida-atlantic', location: 'Boca Raton, FL', color:"#003366" },
-		{ name: 'Louisiana Tech', slug: 'louisiana-tech', location: 'Ruston, LA', color:"#002F8B" },
+		{ name: 'Charlotte', slug: 'charlotte', location: 'Charlotte, NC', color: '#046A38' },
+		{
+			name: 'Florida International',
+			slug: 'florida-international',
+			location: 'Miami, FL',
+			color: '#081E3F'
+		},
+		{
+			name: 'Florida Atlantic',
+			slug: 'florida-atlantic',
+			location: 'Boca Raton, FL',
+			color: '#003366'
+		},
+		{ name: 'Louisiana Tech', slug: 'louisiana-tech', location: 'Ruston, LA', color: '#002F8B' },
 		{
 			name: 'Middle Tennessee State',
 			slug: 'middle-tennessee-state',
-			location: 'Murfreesboro, TN', color:"#0066CC"
+			location: 'Murfreesboro, TN',
+			color: '#0066CC'
 		},
-		{ name: 'North Texas', slug: 'north-texas', location: 'Denton, TX', color:"#00853E" },
-		{ name: 'Rice', slug: 'rice', location: 'Houston, TX', color:"#00205B" },
-		{ name: 'Alabama Birmingham', slug: 'alabama-birmingham', location: 'Birmingham, AL', color:"#006341" },
-		{ name: 'UTEP', slug: 'utep', location: 'El Paso, TX', color:"#FF8200" },
-		{ name: 'Western Kentucky', slug: 'western-kentucky', location: 'Bowling Green, KY', color:"#C60C30" },
-		{ name: 'UTSA', slug: 'utsa', location: 'San Antonio, TX', color:"#F15A22" }
+		{ name: 'North Texas', slug: 'north-texas', location: 'Denton, TX', color: '#00853E' },
+		{ name: 'Rice', slug: 'rice', location: 'Houston, TX', color: '#00205B' },
+		{
+			name: 'Alabama Birmingham',
+			slug: 'alabama-birmingham',
+			location: 'Birmingham, AL',
+			color: '#006341'
+		},
+		{ name: 'UTEP', slug: 'utep', location: 'El Paso, TX', color: '#FF8200' },
+		{
+			name: 'Western Kentucky',
+			slug: 'western-kentucky',
+			location: 'Bowling Green, KY',
+			color: '#C60C30'
+		},
+		{ name: 'UTSA', slug: 'utsa', location: 'San Antonio, TX', color: '#F15A22' }
 	];
 
 	let MACArray: teamInfo[] = [
-		{ name: 'Akron', slug: 'akron', location: 'Akron, OH', color:"#041E42" },
-		{ name: 'Ball State', slug: 'ball-state', location: 'Muncie, IN', color:"#BA0C2F" },
-		{ name: 'Bowling Green', slug: 'bowling-green', location: 'Bowling Green, OH', color:"#FE5000" },
-		{ name: 'Buffalo', slug: 'buffalo', location: 'Buffalo, NY', color:"#005BBB" },
-		{ name: 'Central Michigan', slug: 'Central Michigan', location: 'Mount Pleasant, MI', color:"#6A0032" },
-		{ name: 'Eastern Michigan', slug: 'eastern-michigan', location: 'Ypsilanti, MI', color:"#006633" },
-		{ name: 'Kent State', slug: 'kent-state', location: 'Kent, OH', color:"#002664" },
-		{ name: 'Miami Ohio', slug: 'miami-ohio', location: 'Oxford, Ohio', color:"#B61E2E" },
-		{ name: 'Northern Illinois', slug: 'northern-illinois', location: 'Dekalb, IL', color:"#BA0C2F" },
-		{ name: 'Ohio', slug: 'ohio', location: 'Athens, OH', color:"#00694E" },
-		{ name: 'Toledo', slug: 'toldeo', location: 'Toledo, OH', color:"#15397F" },
-		{ name: 'Western Michigan', slug: 'western-michigan', location: 'Kalamazoo, MI', color:"#6C4023" }
+		{ name: 'Akron', slug: 'akron', location: 'Akron, OH', color: '#041E42' },
+		{ name: 'Ball State', slug: 'ball-state', location: 'Muncie, IN', color: '#BA0C2F' },
+		{
+			name: 'Bowling Green',
+			slug: 'bowling-green',
+			location: 'Bowling Green, OH',
+			color: '#FE5000'
+		},
+		{ name: 'Buffalo', slug: 'buffalo', location: 'Buffalo, NY', color: '#005BBB' },
+		{
+			name: 'Central Michigan',
+			slug: 'Central Michigan',
+			location: 'Mount Pleasant, MI',
+			color: '#6A0032'
+		},
+		{
+			name: 'Eastern Michigan',
+			slug: 'eastern-michigan',
+			location: 'Ypsilanti, MI',
+			color: '#006633'
+		},
+		{ name: 'Kent State', slug: 'kent-state', location: 'Kent, OH', color: '#002664' },
+		{ name: 'Miami Ohio', slug: 'miami-ohio', location: 'Oxford, Ohio', color: '#B61E2E' },
+		{
+			name: 'Northern Illinois',
+			slug: 'northern-illinois',
+			location: 'Dekalb, IL',
+			color: '#BA0C2F'
+		},
+		{ name: 'Ohio', slug: 'ohio', location: 'Athens, OH', color: '#00694E' },
+		{ name: 'Toledo', slug: 'toldeo', location: 'Toledo, OH', color: '#15397F' },
+		{
+			name: 'Western Michigan',
+			slug: 'western-michigan',
+			location: 'Kalamazoo, MI',
+			color: '#6C4023'
+		}
 	];
 
 	let MWESTArray: teamInfo[] = [
-		{ name: 'Air Force', slug: 'air-force', location: 'Colorado Springs, CO', color:"#003087" },
-		{ name: 'Boise State', slug: 'boise-state', location: 'Boise, ID', color:"#0033A0" },
-		{ name: 'Colorado State', slug: 'colorado-state', location: 'Fort Collins, CO', color:"#1E4D2B" },
-		{ name: 'Fresno State', slug: 'fresno-state', location: 'Fresno, CA', color:"#DB0032" },
-		{ name: 'Hawaii', slug: 'hawaii', location: 'Honolulu, HI', color:"#024731" },
-		{ name: 'Nevada', slug: 'nevada', location: 'Reno, NV', color:"#003366" },
-		{ name: 'New Mexico', slug: 'New Mexico', location: 'Albuquerque, NM', color:"#BA0C2F" },
-		{ name: 'San Diego State', slug: 'san-diego-state', location: 'San Diego, CA', color:"#A6192E" },
-		{ name: 'San Jose State', slug: 'san-jose-state', location: 'San Jose, CA', color:"#0055A2" },
-		{ name: 'UNLV', slug: 'unlv', location: 'Las Vegas, NV', color:"#CF0A2C" },
-		{ name: 'Utah State', slug: 'utah-state', location: 'Logan, UT', color:"#00263A" },
-		{ name: 'Wyoming', slug: 'wyoming', location: 'Laramie, WY', color:"#492F24" }
+		{ name: 'Air Force', slug: 'air-force', location: 'Colorado Springs, CO', color: '#003087' },
+		{ name: 'Boise State', slug: 'boise-state', location: 'Boise, ID', color: '#0033A0' },
+		{
+			name: 'Colorado State',
+			slug: 'colorado-state',
+			location: 'Fort Collins, CO',
+			color: '#1E4D2B'
+		},
+		{ name: 'Fresno State', slug: 'fresno-state', location: 'Fresno, CA', color: '#DB0032' },
+		{ name: 'Hawaii', slug: 'hawaii', location: 'Honolulu, HI', color: '#024731' },
+		{ name: 'Nevada', slug: 'nevada', location: 'Reno, NV', color: '#003366' },
+		{ name: 'New Mexico', slug: 'New Mexico', location: 'Albuquerque, NM', color: '#BA0C2F' },
+		{
+			name: 'San Diego State',
+			slug: 'san-diego-state',
+			location: 'San Diego, CA',
+			color: '#A6192E'
+		},
+		{ name: 'San Jose State', slug: 'san-jose-state', location: 'San Jose, CA', color: '#0055A2' },
+		{ name: 'UNLV', slug: 'unlv', location: 'Las Vegas, NV', color: '#CF0A2C' },
+		{ name: 'Utah State', slug: 'utah-state', location: 'Logan, UT', color: '#00263A' },
+		{ name: 'Wyoming', slug: 'wyoming', location: 'Laramie, WY', color: '#492F24' }
 	];
 
 	let SBCArray: teamInfo[] = [
-		{ name: 'Appalachian State', slug: 'appalachian-state', location: 'Boone, NC', color:"#FFCC00" },
-		{ name: 'Arkansas State', slug: 'arkansas-state', location: 'Jonesboro, AR', color:"#CC092F" },
-		{ name: 'Coastal Carolina', slug: 'coastal-carolina', location: 'Conway, SC', color:"#006F71" },
-		{ name: 'Georgia Southern', slug: 'georgia-southern', location: 'Statesboro, GA', color:"#011E41" },
-		{ name: 'Georgia State', slug: 'georgia-state', location: 'Atlanta, GA', color:"#0039A6" },
-		{ name: 'James Madison', slug: 'james-madison', location: 'Harrisonburg, VA', color:"#450084" },
-		{ name: 'Louisiana-Monroe', slug: 'louisian-monroe', location: 'Monroe, LA', color:"#840029" },
-		{ name: 'Louisiana', slug: 'louisiana', location: 'Lafayette, LA', color:"#CE181E" },
-		{ name: 'Marshall', slug: 'marshall', location: 'Hungtington, WV', color:"#00B140" },
-		{ name: 'Old Dominion', slug: 'old-dominion', location: 'Norfolk, VA', color:"#003057" },
-		{ name: 'South Alabama', slug: 'south-alabama', location: 'Mobile, AL', color:"#00205B" },
-		{ name: 'Southern Miss', slug: 'southern-miss', location: 'Hattiesburg, MS', color:"#FFAB00" },
-		{ name: 'Texas State', slug: 'texas-state', location: 'San Marcos, TX', color:"#501214" },
-		{ name: 'Troy', slug: 'troy', location: 'Troy, AL', color:"#8A2432" }
+		{
+			name: 'Appalachian State',
+			slug: 'appalachian-state',
+			location: 'Boone, NC',
+			color: '#FFCC00'
+		},
+		{ name: 'Arkansas State', slug: 'arkansas-state', location: 'Jonesboro, AR', color: '#CC092F' },
+		{
+			name: 'Coastal Carolina',
+			slug: 'coastal-carolina',
+			location: 'Conway, SC',
+			color: '#006F71'
+		},
+		{
+			name: 'Georgia Southern',
+			slug: 'georgia-southern',
+			location: 'Statesboro, GA',
+			color: '#011E41'
+		},
+		{ name: 'Georgia State', slug: 'georgia-state', location: 'Atlanta, GA', color: '#0039A6' },
+		{
+			name: 'James Madison',
+			slug: 'james-madison',
+			location: 'Harrisonburg, VA',
+			color: '#450084'
+		},
+		{ name: 'Louisiana-Monroe', slug: 'louisian-monroe', location: 'Monroe, LA', color: '#840029' },
+		{ name: 'Louisiana', slug: 'louisiana', location: 'Lafayette, LA', color: '#CE181E' },
+		{ name: 'Marshall', slug: 'marshall', location: 'Hungtington, WV', color: '#00B140' },
+		{ name: 'Old Dominion', slug: 'old-dominion', location: 'Norfolk, VA', color: '#003057' },
+		{ name: 'South Alabama', slug: 'south-alabama', location: 'Mobile, AL', color: '#00205B' },
+		{ name: 'Southern Miss', slug: 'southern-miss', location: 'Hattiesburg, MS', color: '#FFAB00' },
+		{ name: 'Texas State', slug: 'texas-state', location: 'San Marcos, TX', color: '#501214' },
+		{ name: 'Troy', slug: 'troy', location: 'Troy, AL', color: '#8A2432' }
 	];
 
 	let YearsArray: number[] = [
@@ -300,7 +391,6 @@
 		'-Football/Commits/';
 	mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
-	
 	let [team_long, team_lat] = [-96.681679, 40.806]; //Lincoln, NE
 
 	async function updateTeamLocation() {
@@ -415,8 +505,6 @@
 			'https://api.mapbox.com/geocoding/v5/mapbox.places/' +
 			parsedLocation +
 			'.json?limit=1&autocomplete=false&access_token=pk.eyJ1Ijoia29sc29uNDYzIiwiYSI6ImNsNzZ0NDVqYTBpcnEzbnFodHE5bjVyN2IifQ.u9hrRp9nzRbiGT3mJ-X5LA';
-
-			
 
 		try {
 			const teamCoordsRaw = await axios.get(geoCodeUrl);
@@ -1205,16 +1293,19 @@
 	</div>
 </div>
 
-<div class="border max-w-11-12 min-w-max h-14 mx-auto m-5 sticky flex justify-center">
-	<h1 class="justify-center flex flex-auto p-1 h-fit">
+<div class="border max-w-11-12 min-w-max h-14 mx-auto m-5 sticky grid grid-cols-1 justify-center">
+	<h1 class="justify-center flex flex-auto  h-fit">
 		Made by <a
 			class="ml-1 px-1  underline rounded-lg"
 			href="https://kyleolson.vercel.app/"
 			target="_blank"
 		>
-			Kyle Olson</a
-		>
+			Kyle Olson
+		</a>
 	</h1>
+	<a class="justify-center flex underline" target="_blank" href="https://www.buymeacoffee.com/kyleolson"
+		>☕️ Buy Me a Coffee
+	</a>
 </div>
 
 <style>
