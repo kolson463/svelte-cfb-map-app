@@ -87,12 +87,7 @@
 		{ name: 'Iowa', slug: 'iowa', location: 'Iowa City, IA', color: '#FFCD00' },
 		{ name: 'Maryland', slug: 'maryland', location: 'College Park, MD', color: '#E03A3E' },
 		{ name: 'Indiana', slug: 'indiana', location: 'Bloomington, IN', color: '#990000' },
-		{
-			name: 'Michigan State',
-			slug: 'michigan-state',
-			location: 'East Lansing, MI',
-			color: '#18453B'
-		},
+		{name: 'Michigan State',slug: 'michigan-state',location: 'East Lansing, MI',color: '#18453B'},
 		{ name: 'Michigan', slug: 'michigan', location: 'Ann Arbor, MI', color: '#00274C' },
 		{ name: 'Minnesota', slug: 'minnesota', location: 'Minneapolis, MN', color: '#7A0019' },
 		{ name: 'Nebraska', slug: 'nebraska', location: 'Lincoln, NE', color: '#E41C38' },
@@ -105,12 +100,7 @@
 	];
 
 	let ACCArray: teamInfo[] = [
-		{
-			name: 'Boston College',
-			slug: 'boston-college',
-			location: 'Chestnut Hull, MA',
-			color: '#98002E'
-		},
+		{name: 'Boston College',slug: 'boston-college',location: 'Chestnut Hull, MA',color: '#98002E'},
 		{ name: 'Clemson', slug: 'clemson', location: 'Clemson, SC', color: '#F56600' },
 		{ name: 'Duke', slug: 'duke', location: 'Durham, NC', color: '#003087' },
 		{ name: 'Florida State', slug: 'florida-state', location: 'Tallahassee, FL', color: '#782F40' },
@@ -118,12 +108,7 @@
 		{ name: 'Louisville', slug: 'louisville', location: 'Louisville, KY', color: '#AD0000' },
 		{ name: 'Miami', slug: 'miami', location: 'Coral Gables, FL', color: '#F47321' },
 		{ name: 'NC State', slug: 'nc-state', location: 'Raleigh, NC', color: '#CC0000' },
-		{
-			name: 'North Carolina',
-			slug: 'north-carolina',
-			location: 'Chapel Hill, NC',
-			color: '#7BAFD4'
-		},
+		{name: 'North Carolina',slug: 'north-carolina',location: 'Chapel Hill, NC',color: '#7BAFD4'},
 		{ name: 'Syracuse', slug: 'syracuse', location: 'Syracuse, NY', color: '#F76900' },
 		{ name: 'Pittsburgh', slug: 'pittsburgh', location: 'Pittsburgh, PA', color: '#003594' },
 		{ name: 'Virginia', slug: 'virginia', location: 'Charlottesville, VA', color: '#F84C1E' },
@@ -141,12 +126,7 @@
 		{ name: 'Tennessee', slug: 'tennessee', location: 'Knoxville, TN', color: '#FF8200' },
 		{ name: 'Georgia', slug: 'georgia', location: 'Athens, GA', color: '#BA0C2F' },
 		{ name: 'Florida', slug: 'florida', location: 'Gainesville, FL', color: '#0021A5' },
-		{
-			name: 'Mississippi State',
-			slug: 'mississippi-state',
-			location: 'Starkville, MS',
-			color: '#660000'
-		},
+		{name: 'Mississippi State',slug: 'mississippi-state',location: 'Starkville, MS',color: '#660000'},
 		{ name: 'Ole Miss', slug: 'ole-miss', location: 'Oxford, MS', color: '#006BA6' },
 		{ name: 'South Carolina', slug: 'south-carolina', location: 'Columbia, SC', color: '#73000A' },
 		{ name: 'Auburn', slug: 'auburn', location: 'Auburn, AL', color: '#0C2340' },
@@ -159,12 +139,7 @@
 		{ name: 'Kansas', slug: 'kansas', location: 'Lawrence, KS', color: '#0051BA' },
 		{ name: 'Kansas State', slug: 'kansas-state', location: 'Manhattan, KS', color: '#512888' },
 		{ name: 'Oklahoma', slug: 'oklahoma', location: 'Norman, OK', color: '#841617' },
-		{
-			name: 'Oklahoma State',
-			slug: 'oklahoma-state',
-			location: 'Stillwater, OK',
-			color: '#FF7300'
-		},
+		{name: 'Oklahoma State',slug: 'oklahoma-state',location: 'Stillwater, OK',color: '#FF7300'},
 		{ name: 'TCU', slug: 'tcu', location: 'Forth Worth, TX', color: '#4D1979' },
 		{ name: 'Texas', slug: 'texas', location: 'Austin, TX', color: '#BF5700' },
 		{ name: 'Texas Tech', slug: 'texas-tech', location: 'Lubbock, TX', color: '#CC0000' },
@@ -174,12 +149,7 @@
 	let Pac12Array: teamInfo[] = [
 		{ name: 'Colorado', slug: 'colorado', location: 'Boulder, CO', color: '#CFB87C' },
 		{ name: 'Utah', slug: 'utah', location: 'Salt Lake City, UT', color: '#CC0000' },
-		{
-			name: 'Washington State',
-			slug: 'washington-state',
-			location: 'Pullman, WA',
-			color: '#981E32'
-		},
+		{name: 'Washington State',slug: 'washington-state',location: 'Pullman, WA',color: '#981E32'},
 		{ name: 'Washington', slug: 'washington', location: 'Seattle, WA', color: '#4B2E83' },
 		{ name: 'Oregon', slug: 'oregon', location: 'Eugene, OR', color: '#154733' },
 		{ name: 'Oregon State', slug: 'oregon-state', location: 'Corvallis, OR', color: '#DC4405' },
@@ -213,17 +183,9 @@
 
 	let CUSAArray: teamInfo[] = [
 		{ name: 'Charlotte', slug: 'charlotte', location: 'Charlotte, NC', color: '#046A38' },
-		{
-			name: 'Florida International',
-			slug: 'florida-international',
-			location: 'Miami, FL',
-			color: '#081E3F'
+		{name: 'Florida International',slug: 'florida-international',location: 'Miami, FL',color: '#081E3F'
 		},
-		{
-			name: 'Florida Atlantic',
-			slug: 'florida-atlantic',
-			location: 'Boca Raton, FL',
-			color: '#003366'
+		{name: 'Florida Atlantic',slug: 'florida-atlantic',location: 'Boca Raton, FL',color: '#003366'
 		},
 		{ name: 'Louisiana Tech', slug: 'louisiana-tech', location: 'Ruston, LA', color: '#002F8B' },
 		{
@@ -353,7 +315,7 @@
 	];
 
 	let YearsArray: number[] = [
-		2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010,
+		2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010,
 		2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999
 	];
 
@@ -377,11 +339,10 @@
 		resultCoords: Promise<[number, number]>;
 	}[] = [];
 	let numCommits = 0;
-	let teamImageUrl =
-		'https://s3media.247sports.com/Uploads/Assets/814/84/11084814.png?fit=bounds&crop=50:50,offset-y0.50&width=50&height=50&fit=crop';
+	let teamImageUrl ='https://s3media.247sports.com/Uploads/Assets/814/84/11084814.png?fit=bounds&crop=50:50,offset-y0.50&width=50&height=50&fit=crop';
 
 	let teamNameUrl = 'nebraska';
-	let selectedYear = 2022;
+	let selectedYear = 2024;
 
 	let url =
 		'https://247sports.com/college/' +
@@ -684,7 +645,7 @@
 		loadingStatus = true;
 		badUrl = '';
 
-		if (year < 2026 && year > 1998) {
+		if (year < 2027 && year > 1998) {
 			removeTeamMarkers();
 			removeMaps();
 			// removePlayerMarkers();
@@ -714,7 +675,7 @@
 
 	async function selectTeam(teamName: string): Promise<void> {
 		loadingStatus = true;
-		if (selectedYear > 2026 || selectedYear < 1999) {
+		if (selectedYear > 2027 || selectedYear < 1999) {
 			return;
 		}
 
@@ -794,11 +755,11 @@
 				let score = $('.score', player1).text();
 				let stars = '';
 
-				parseFloat(score) > 0.98832
+				parseFloat(score) >= 98
 					? (stars = '⭐⭐⭐⭐⭐')
-					: parseFloat(score) > 0.89
+					: parseFloat(score) >= 89
 					? (stars = '⭐⭐⭐⭐')
-					: parseFloat(score) > 0.7999
+					: parseFloat(score) >= 80
 					? (stars = '⭐⭐⭐')
 					: score === 'NA'
 					? (stars = 'Not Rated')
@@ -1295,17 +1256,14 @@
 
 <div class="border max-w-11-12 min-w-max h-14 mx-auto m-5 sticky grid grid-cols-1 justify-center">
 	<h1 class="justify-center flex flex-auto  h-fit">
-		Made by <a
-			class="ml-1 px-1  underline rounded-lg"
-			href="https://kyleolson.vercel.app/"
-			target="_blank"
-		>
-			Kyle Olson
-		</a>
+		 <p
+			class="ml-1 px-1 rounded-lg"
+		>Made by Kyle Olson
+	</p>
 	</h1>
-	<a class="justify-center flex underline" target="_blank" href="https://www.buymeacoffee.com/kyleolson"
+	<!-- <a class="justify-center flex underline" target="_blank" href="https://www.buymeacoffee.com/kyleolson"
 		>☕️ Buy Me a Coffee
-	</a>
+	</a> -->
 </div>
 
 <style>
